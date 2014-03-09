@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+input:focus{
+    outline: 0;
+}
+
+#toolbar {
+    margin: 20px;
+}
+
+.extoolbar {
+    margin-bottom: 20px;
+}
+
+.extoolbar .title input {
+    font-size: 20px;
+    border: none;
+    margin: 0 0 10px;
+    width: 60%;
+}
+
+.exeditor {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff url('../img/checkerboard.png') repeat top left scroll;
+    font-family: arial;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.exeditor .layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.exeditor .layer .item {
+    position: absolute;
+    border: 1px dotted transparent;
+}
+
+.exeditor .layer .item img {
+    width: inherit;
+    height: inherit;
+}
+
+.exeditor .guide-top, .exeditor .guide-left, .exeditor .guide-bottom, .exeditor .guide-right, .exeditor .guide-quarter-left, .exeditor .guide-quarter-right, .exeditor .guide-middle {
+    position: absolute;
+    z-index: 9999000;
+}
+
+.exeditor .guide-top, .exeditor .guide-bottom {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    border-top: 1px dotted #c0c0c0;
+}
+
+.exeditor .guide-bottom {
+    top: auto;
+    bottom: 20px;
+}
+
+.exeditor .guide-left, .exeditor .guide-right {
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    border-right: 1px dotted #c0c0c0;
+}
+
+.exeditor .guide-right {
+    left: auto;
+    right: 20px;
+    border-right: none;
+    border-left: 1px dotted #c0c0c0;
+}
+
+.exeditor .guide-middle, .exeditor .guide-quarter-left, .exeditor .guide-quarter-right {
+    top: 0;
+    left: 50%;
+    height: 100%;
+    border-left: 1px solid #00ffff;
+}
+
+.exeditor .guide-middle:before, .exeditor .guide-middle:after, .exeditor .guide-quarter-left:before, .exeditor .guide-quarter-left:after, .exeditor .guide-quarter-right:before, .exeditor .guide-quarter-right:after {
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: 9999000;
+    top: 0;
+    height: 100%;
+    border-left: 1px dotted #c0c0c0;
+}
+
+.exeditor .guide-middle:after {
+    left: calc(50% + 20px);
+}
+
+.exeditor .guide-middle:before {
+    left: calc(50% - 20px);
+}
+
+.exeditor .guide-quarter-left {
+    left: 348px;
+}
+
+.exeditor .guide-quarter-left:after {
+    left: calc(30% + 20px);
+}
+
+.exeditor .guide-quarter-left:before {
+    left: calc(30% - 20px);
+}
+
+.exeditor .guide-quarter-right {
+    left: 676px;
+}
+
+.exeditor .guide-quarter-right:after {
+    left: calc(60% + 20px);
+}
+
+.exeditor .guide-quarter-right:before {
+    left: calc(60% - 20px);
+}
+
+
+
+
+
+
+
+
+
+
+.exeditor .item {
+    border: 1px dotted transparent;
+}
+
+.exeditor .item:hover, .exeditor .item.active {
+    position: absolute;
+    border: 1px dotted #c0c0c0;
+}
+
+.exeditor .ui-resizable-ne, .exeditor .ui-resizable-nw, .exeditor .ui-resizable-se, .exeditor .ui-resizable-sw {
+    border: 1px dotted #c0c0c0;
+}
+
+.exeditor .item.item-text {
+    padding: 10px;
+}
