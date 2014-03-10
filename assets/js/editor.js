@@ -396,9 +396,6 @@
 		options.editor.Layers.pop();
 	}
 
-	Editor.prototype.Layer.prototype.move = function(index) {
-	}
-
 	Editor.prototype.Layer.prototype.remove = function(index) {
 		if (index != null) {
 			if (this.Items[index]) {
@@ -466,7 +463,7 @@
 			Action.queue('Item Move Down Z-Index', action);
 			return this;
 		},
-		position: function(x, y, z) {
+		move: function(x, y, z) {
 			return this;
 		}
 	}
